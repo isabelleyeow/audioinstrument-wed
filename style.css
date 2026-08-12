@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Stack+Sans+Text:wght@200..700&display=swap');
+
+/*this is where we're storing our custom variables*/
+:root {
+    --colour-01: white;
+    --colour-02: black;
+    --colour-03: lightgrey;
+    --colour-04: darkgrey;
+
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+    --colour-01: black;
+    --colour-02: white;
+    --colour-03: darkgrey;
+    --colour-04: lightgrey;
+    --border: 0.25rem double var(--colour-03);
+    }
+}
+
+body {
+    font-family: "Stack Sans Text", sans-serif;
+    background-color: var(--colour-01);
+    color: var(--colour-02);
+}
+
+dialog[open]{
+    background-color: var(--color-01);
+    color: var(--color-02);
+    margin:auto;
+    padding: 0.7rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    align-items: center;
+    border: var(--border);
+
+}
+
+button{
+    border: 0.15rem double var(--colour-03);
+}
+
